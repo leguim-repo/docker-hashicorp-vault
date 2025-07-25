@@ -1,0 +1,19 @@
+{
+  "secrets": {
+    "my-app/dev": {
+      "db_user": "development_user",
+      "db_password": "secret_password",
+      "api_key": "my-api-key-development"
+    },
+    "my-app/pre": {
+      "db_user": "prod_user",
+      "db_password": "prod_secret_password",
+      "api_key": "my-api-key-production"
+    },
+    "my-app/prod": {
+      "db_user": "prod_user",
+      "db_password": "prod_secret_password",
+      "api_key": "my-api-key-production"
+    }
+  }
+}

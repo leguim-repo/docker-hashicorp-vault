@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "docker-hashicorp-vault"
+version = "0.1.0"
+description = "Just a docker demo"
+authors = ["Mike <60325499+leguim-repo@users.noreply.github.com>"]
+keywords = ["docker", "hashicorp", "vault", "demo"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+hvac = "^2.3.0"
+python-dotenv = "^1.1.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
