@@ -1,0 +1,19 @@
+{
+  "secrets": {
+    "mi-app/dev": {
+      "db_usuario": "usuario_desarrollo",
+      "db_password": "password_secreto",
+      "api_key": "mi-api-key-desarrollo"
+    },
+    "mi-app/pre": {
+      "db_usuario": "usuario_prod",
+      "db_password": "prod_password_secreto",
+      "api_key": "mi-api-key-produccion"
+    },
+    "mi-app/prod": {
+      "db_usuario": "usuario_prod",
+      "db_password": "prod_password_secreto",
+      "api_key": "mi-api-key-produccion"
+    }
+  }
+}
