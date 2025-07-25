@@ -37,6 +37,8 @@ def read_secret(path):
 
 
 if __name__ == '__main__':
+    print("The creation of the is in script file named scripts/init-vault.sh")
+    print("The init-vault.sh script is used to initialize the Vault server with some secrets with vault-init container.")
 
     for env in ENVIRONMENTS:
         print(f"Reading secrets for {env} environment...")
@@ -50,4 +52,4 @@ if __name__ == '__main__':
                 print(f"  {key}: {'*' * len(value)}")  # Show asterisks instead of actual password
             else:
                 print(f"  {key}: {value}")
-        print("-"*40)
+        print("-" * 40)
