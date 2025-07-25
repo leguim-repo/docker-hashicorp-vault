@@ -1,19 +1,19 @@
 {
   "secrets": {
-    "mi-app/dev": {
-      "db_usuario": "usuario_desarrollo",
-      "db_password": "password_secreto",
-      "api_key": "mi-api-key-desarrollo"
+    "my-app/dev": {
+      "db_user": "development_user",
+      "db_password": "secret_password",
+      "api_key": "my-api-key-development"
     },
-    "mi-app/pre": {
-      "db_usuario": "usuario_prod",
-      "db_password": "prod_password_secreto",
-      "api_key": "mi-api-key-produccion"
+    "my-app/pre": {
+      "db_user": "prod_user",
+      "db_password": "prod_secret_password",
+      "api_key": "my-api-key-production"
     },
-    "mi-app/prod": {
-      "db_usuario": "usuario_prod",
-      "db_password": "prod_password_secreto",
-      "api_key": "mi-api-key-produccion"
+    "my-app/prod": {
+      "db_user": "prod_user",
+      "db_password": "prod_secret_password",
+      "api_key": "my-api-key-production"
     }
   }
 }

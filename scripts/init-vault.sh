@@ -11,10 +11,10 @@ vault secrets enable -version=2 kv
 
 # Crear una política que permita leer y escribir en la ruta kv/mi-app
 cat > /tmp/app-policy.hcl << EOF
-path "kv/data/mi-app/*" {
+path "kv/data/my-app/*" {
   capabilities = ["create", "read", "update", "delete", "list"]
 }
-path "kv/metadata/mi-app/*" {
+path "kv/metadata/my-app/*" {
   capabilities = ["list"]
 }
 EOF
