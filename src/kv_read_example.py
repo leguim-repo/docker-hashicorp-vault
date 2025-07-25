@@ -1,11 +1,7 @@
 import os
-import warnings
 
 import hvac
 from dotenv import load_dotenv
-
-# Suppress deprecation warning
-warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 load_dotenv("./config/.env.vault.secrets")
 
@@ -38,7 +34,8 @@ def read_secret(path):
 
 if __name__ == '__main__':
     print("The creation of the is in script file named scripts/init-vault.sh")
-    print("The init-vault.sh script is used to initialize the Vault server with some secrets with vault-init container.")
+    print(
+        "The init-vault.sh script is used to initialize the Vault server with some secrets with vault-init container.")
 
     for env in ENVIRONMENTS:
         print(f"Reading secrets for {env} environment...")

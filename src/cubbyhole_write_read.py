@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv("./config/.env.vault.secrets")
 
 VAULT_ADDR = os.getenv("VAULT_ADDR")
-VAULT_ROOT_TOKEN = os.getenv("VAULT_ROOT_TOKEN")
+VAULT_ROOT_TOKEN = os.getenv("VAULT_DEV_ROOT_TOKEN_ID")
 
 # Secret to store
 SECRET_PATH = "cubbyhole/my_personal_secret"
