@@ -1,0 +1,39 @@
+services:
+  vault:
+    image: hashicorp/vault:latest
+    container_name: vault
+    ports:
+      - "8200:8200"
+    environment:
+      - VAULT_DEV_ROOT_TOKEN_ID=mi_token_root
+      - VAULT_ADDR=http://0.0.0.0:8200
+      - VAULT_API_ADDR=http://0.0.0.0:8200
+    cap_add:
+      - IPC_LOCK
+    volumes:
+      - ./config:/vault/config
+      - ./scripts:/vault/scripts
+    command: server -dev
+    healthcheck:
+      test: ["CMD", "vault", "status"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  vault-init:
+    build:
+      context: .
+      dockerfile: Dockerfile.init
+    container_name: vault-init
+    depends_on:
+      vault:
+        condition: service_healthy
+    environment:
+      - VAULT_ADDR=http://vault:8200
+      - VAULT_TOKEN=mi_token_root
+    volumes:
+      - ./scripts:/scripts:ro
+      - ./config:/config:ro
+    entrypoint: ["sh"]
+    command: ["/scripts/init-vault.sh"]
+
