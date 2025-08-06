@@ -4,7 +4,7 @@ import hvac
 from dotenv import load_dotenv
 
 # Load environment variables
-load_dotenv("./config/.env.vault.secrets")
+load_dotenv("../config/.env.vault.secrets")
 
 VAULT_ADDR = os.getenv("VAULT_ADDR")
 VAULT_ROOT_TOKEN = os.getenv("VAULT_DEV_ROOT_TOKEN_ID")
