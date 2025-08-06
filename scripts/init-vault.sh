@@ -9,6 +9,22 @@ done
 # Habilitar el motor de secretos KV version 2
 vault secrets enable -version=2 kv
 
+# Habilitar el motor TOTP
+vault secrets enable totp
+
+# Crear una política para TOTP
+cat > /tmp/totp-policy.hcl << EOF
+path "totp/*" {
+  capabilities = ["create", "read", "update", "delete", "list"]
+}
+EOF
+
+# Aplicar la política TOTP
+vault policy write totp-policy /tmp/totp-policy.hcl
+
+echo "Motor TOTP habilitado y configurado"
+
+
 # Crear una política que permita leer y escribir en la ruta kv/mi-app
 cat > /tmp/app-policy.hcl << EOF
 path "kv/data/my-app/*" {
