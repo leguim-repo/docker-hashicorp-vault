@@ -1,5 +1,11 @@
 # Hashicorp Vault
 
+```
+docker compose up
+```
+
+Hashicorp Vault url: http://localhost:8200
+
 ## Tipos de secretos
 
 ### 1. **`Cubbyhole`**
