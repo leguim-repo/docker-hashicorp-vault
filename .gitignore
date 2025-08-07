@@ -242,5 +242,4 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
-/src/config/.env.vault.secrets
-/src/config/.env.vault-init.secrets
+/src/config/.env*
