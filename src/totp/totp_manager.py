@@ -1,4 +1,5 @@
 import os
+
 import hvac
 from dotenv import load_dotenv
 
@@ -7,10 +8,6 @@ load_dotenv("../config/.env.vault.secrets")
 
 VAULT_ADDR = os.getenv("VAULT_ADDR")
 VAULT_ROOT_TOKEN = os.getenv("VAULT_DEV_ROOT_TOKEN_ID")
-
-# Añadir verificación de variables de entorno
-print(f"VAULT_ADDR: {VAULT_ADDR}")
-print(f"VAULT_ROOT_TOKEN: {VAULT_ROOT_TOKEN}")
 
 
 def import_totp():
